@@ -30,13 +30,13 @@ import com.techlab.articulo.interfaces.Identificable;
  * ------------------------------------------------------------
  * - implementar Calculable
  * - implementar Identificable
- * - tener constructor
- * - tener getters y setters
+ * [x] tener constructor
+ * [x] tener getters y setters
  * - tener toString()
  * - declarar un método abstracto:
- *   String getTipoArticulo();
+ *  [x] String getTipoArticulo();
  *
- * OPCIONAL RECOMENDADO
+ * [x] OPCIONAL RECOMENDADO
  * ------------------------------------------------------------
  * Podés declarar también otro método abstracto para el detalle específico,
  * por ejemplo:
@@ -49,11 +49,51 @@ public abstract class Articulo implements Calculable, Identificable {
     protected double precio;
     protected Categoria categoria;
 
-    // TODO:
     // Crear constructor completo.
+    public Articulo(int codigo, String nombre, double precio, Categoria categoria) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+    };
 
-    // TODO:
-    // Crear getters y setters.
+    // Crear getters 
+    public int getCodigo(){
+        return codigo;
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
+
+    public double getPrecio(){
+        return precio;
+    }
+
+    public Categoria getCategoria(){
+        return categoria;
+    }
+
+    // Setters
+
+    public void setCodigo(int codigo){
+        this.codigo = codigo;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public void setPrecio(double precio){
+        this.precio = precio;
+    }
+
+    public void setCategoria(Categoria categoria){
+        this.categoria = categoria;
+    }
+
+
+    public abstract String getDetalleEspecifico();
 
     public abstract String getTipoArticulo();
 
