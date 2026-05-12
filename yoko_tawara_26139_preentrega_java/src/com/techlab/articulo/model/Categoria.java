@@ -70,4 +70,6 @@ public class Categoria implements Identificable {
         // TODO:
         return "Categoria {" + "codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
+
+    
 }
