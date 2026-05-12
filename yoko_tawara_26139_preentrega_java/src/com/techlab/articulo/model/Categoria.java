@@ -47,7 +47,7 @@ public class Categoria implements Identificable {
     }
 
     // Crear getters 
-    public String getnombre(){
+    public String getNombre(){
         return nombre;
     }
 
@@ -71,5 +71,5 @@ public class Categoria implements Identificable {
         return "Categoria {" + "codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
 
-    
+
 }

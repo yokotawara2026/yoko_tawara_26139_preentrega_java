@@ -32,7 +32,7 @@ import com.techlab.articulo.interfaces.Identificable;
  * - implementar Identificable
  * [x] tener constructor
  * [x] tener getters y setters
- * - tener toString()
+ * [x] tener toString()
  * [x] declarar un método abstracto: [x] String getTipoArticulo();
  *
  * [x] OPCIONAL RECOMENDADO
@@ -57,6 +57,7 @@ public abstract class Articulo implements Calculable, Identificable {
     };
 
     // Crear getters 
+    @Override // lo sugiere?
     public int getCodigo(){
         return codigo;
     }
@@ -102,6 +103,6 @@ public abstract class Articulo implements Calculable, Identificable {
         // Mostrar todos los datos comunes del artículo.
         // Sugerencia:
         // incluir también tipo y precio final.
-        return "";
+        return "Articulo {" + "codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + ", categoria=" + categoria.getNombre() + ", tipo=" + this.getTipoArticulo() + ", detalle=" + this.getDetalleEspecifico() + "}";
     }
 }
