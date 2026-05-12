@@ -33,8 +33,7 @@ import com.techlab.articulo.interfaces.Identificable;
  * [x] tener constructor
  * [x] tener getters y setters
  * - tener toString()
- * - declarar un método abstracto:
- *  [x] String getTipoArticulo();
+ * [x] declarar un método abstracto: [x] String getTipoArticulo();
  *
  * [x] OPCIONAL RECOMENDADO
  * ------------------------------------------------------------

@@ -13,8 +13,8 @@ package com.techlab.articulo.model;
  *
  * ESTA CLASE DEBE
  * ------------------------------------------------------------
- * - tener constructor
- * - tener getters y setters
+ * [x] tener constructor
+ * [x] tener getters y setters
  * - sobrescribir getTipoArticulo()
  * - sobrescribir calcularPrecioFinal()
  *
@@ -28,11 +28,22 @@ public class ArticuloAlimenticio extends Articulo {
 
     private int diasParaVencimiento;
 
-    // TODO:
     // Crear constructor.
+    public ArticuloAlimenticio(int codigo, String nombre, double precio, Categoria categoria,  int diasParaVencimiento){
+        super(codigo, nombre, precio, categoria);
+        this.diasParaVencimiento = diasParaVencimiento;
+    }
 
-    // TODO:
-    // Crear getters y setters.
+    // Crear getters 
+    public int getDiasParaVencimiento() {
+        return diasParaVencimiento;
+    }
+
+    //  setters.
+    public void setDiasParaVencimiento(int dias){
+        this.diasParaVencimiento = dias ;
+    }
+
 
     @Override
     public String getTipoArticulo() {
