@@ -19,4 +19,5 @@ public interface Calculable {
 
     // TODO:
     // Declarar el método calcularPrecioFinal().
+    public double calcularPrecioFinal();
 }
