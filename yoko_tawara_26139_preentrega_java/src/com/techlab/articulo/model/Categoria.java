@@ -18,9 +18,9 @@ import com.techlab.articulo.interfaces.Identificable;
  * ESTA CLASE DEBE
  * ------------------------------------------------------------
  * - implementar Identificable
- * - tener constructor
- * - tener getters y setters
- * - tener toString()
+ * [x] tener constructor
+ * [x] tener getters y setters
+ * [x] tener toString()
  *
  * IMPORTANTE
  * ------------------------------------------------------------
@@ -32,8 +32,13 @@ public class Categoria implements Identificable {
     private String nombre;
     private String descripcion;
 
-    // TODO:
+
     // Crear constructor.
+    public Categoria(int codigo, String nombre, String descripcion){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
 
     @Override
     public int getCodigo() {
@@ -41,12 +46,28 @@ public class Categoria implements Identificable {
         return 0;
     }
 
-    // TODO:
-    // Crear getters y setters restantes.
+    // Crear getters 
+    public String getnombre(){
+        return nombre;
+    }
+
+    public String getDescripcion(){
+        return descripcion;
+    }
+
+    // setters restantes.
+    public void setNombre(String nuevoNombre){
+        this.nombre = nuevoNombre;
+    }
+
+    public void setDescripcion(String nuevaDescripcion){
+        this.descripcion = nuevaDescripcion;
+    }
+
 
     @Override
     public String toString() {
         // TODO:
-        return "";
+        return "Categoria {" + "codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
 }
