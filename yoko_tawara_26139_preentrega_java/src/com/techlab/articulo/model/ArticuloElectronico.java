@@ -13,8 +13,8 @@ package com.techlab.articulo.model;
  *
  * ESTA CLASE DEBE
  * ------------------------------------------------------------
- * - tener constructor
- * - tener getters y setters
+ * [x] tener constructor
+ * [x] tener getters y setters
  * - sobrescribir getTipoArticulo()
  * - sobrescribir calcularPrecioFinal()
  *
@@ -31,11 +31,22 @@ public class ArticuloElectronico extends Articulo {
 
     private int garantiaMeses;
 
-    // TODO:
+    
     // Crear constructor.
+    public ArticuloElectronico(int codigo, String nombre, double precio, Categoria categoria,  int garantiaMeses){
+        super(codigo, nombre, precio, categoria);
+        this.garantiaMeses = garantiaMeses;
+    }
 
-    // TODO:
-    // Crear getters y setters.
+    // Crear getters
+    public int garantiaMeses() {
+        return garantiaMeses;
+    }
+
+    //  setters.
+    public void garantiaMeses(int meses){
+        this.garantiaMeses = meses ;
+    }
 
     @Override
     public String getTipoArticulo() {
