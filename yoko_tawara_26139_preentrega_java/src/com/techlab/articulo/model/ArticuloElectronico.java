@@ -51,7 +51,7 @@ public class ArticuloElectronico extends Articulo {
     @Override
     public String getTipoArticulo() {
         // TODO:
-        return "";
+        return categoria.getNombre();
     }
 
     @Override

@@ -47,8 +47,7 @@ public class ArticuloAlimenticio extends Articulo {
 
     @Override
     public String getTipoArticulo() {
-        //TODO
-        return "";
+        return categoria.getNombre();
     }
 
     @Override

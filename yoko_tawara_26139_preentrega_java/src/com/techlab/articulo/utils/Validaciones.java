@@ -32,13 +32,13 @@ public final class Validaciones {
     // TODO:
     // Implementar validaciones necesarias.
 
-    public validarTextoNoVacio(String texto) {};
+    public abstract static void validarTextoNoVacio(String texto) {};
 
-    public validarLongitudMaxima(String texto, int maximo){};
+    public abstract static void validarLongitudMaxima(String texto, int maximo){};
 
-    public validarNoNegativo(int valor){};
+    public abstract static void validarNoNegativo(int valor){};
 
-    public validarNoNegativo(double valor){};
+    public abstract static void validarNoNegativo(double valor){};
 
 
 }
