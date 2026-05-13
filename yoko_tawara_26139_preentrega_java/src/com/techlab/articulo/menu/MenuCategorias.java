@@ -63,6 +63,8 @@ public class MenuCategorias extends Menu {
     public void ejecutar() {
         // TODO:
         // Implementar el loop del menú y llamar a los métodos correspondientes.
+
+        
     }
 
     // TODO:

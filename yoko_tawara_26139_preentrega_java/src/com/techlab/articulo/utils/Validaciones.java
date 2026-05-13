@@ -31,4 +31,14 @@ public final class Validaciones {
 
     // TODO:
     // Implementar validaciones necesarias.
+
+    public validarTextoNoVacio(String texto) {};
+
+    public validarLongitudMaxima(String texto, int maximo){};
+
+    public validarNoNegativo(int valor){};
+
+    public validarNoNegativo(double valor){};
+
+
 }

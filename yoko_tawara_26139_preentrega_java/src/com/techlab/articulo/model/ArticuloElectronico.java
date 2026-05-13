@@ -39,12 +39,12 @@ public class ArticuloElectronico extends Articulo {
     }
 
     // Crear getters
-    public int garantiaMeses() {
+    public int getGarantiaMeses() {
         return garantiaMeses;
     }
 
     //  setters.
-    public void garantiaMeses(int meses){
+    public void setGarantiaMeses(int meses){
         this.garantiaMeses = meses ;
     }
 

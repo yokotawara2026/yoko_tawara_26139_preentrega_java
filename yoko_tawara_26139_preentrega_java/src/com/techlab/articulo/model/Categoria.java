@@ -43,7 +43,7 @@ public class Categoria implements Identificable {
     @Override
     public int getCodigo() {
         // TODO:
-        return 0;
+        return codigo;
     }
 
     // Crear getters 
@@ -67,7 +67,6 @@ public class Categoria implements Identificable {
 
     @Override
     public String toString() {
-        // TODO:
         return "Categoria {" + "codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
 
