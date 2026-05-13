@@ -76,7 +76,7 @@ public abstract class Menu {
         }
     
 
-    public static String leerTexto(Scanner scanner, String mensaje){
+    public static String leerTextoNoVacio(Scanner scanner, String mensaje){
         while (true) {
             System.out.println(mensaje);
             String texto = scanner.nextLine();

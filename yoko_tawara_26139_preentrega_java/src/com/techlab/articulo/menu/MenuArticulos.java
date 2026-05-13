@@ -1,5 +1,9 @@
 package com.techlab.articulo.menu;
 
+
+import java.util.Scanner;
+
+
 /**
  * CONSIGNA DE ESTA CLASE
  * ------------------------------------------------------------
@@ -78,8 +82,45 @@ public class MenuArticulos extends Menu {
     public void ejecutar() {
         // TODO:
         // Implementar el loop del menú y llamar a los métodos correspondientes.
+
     }
 
     // TODO:
     // Implementar todos los métodos del CRUD de artículos.
+    public static void ingresarArticulo(Scanner scanner, ArrayList<Articulo> articulos, ArrayList<Categoria> categorias){
+        System.out.println("\n -- INGRESAR ARTICULO --");
+        System.out.println("1 - Artículo Electrónico");
+        System.out.println("2 - Artículo Alimenticio");
+
+        int tipo;
+        do {
+            tipo = leerEntero(scanner, "Seleccione el tipo de artículo: ");
+            if (tipo != 1 && tipo != 2 ){
+                System.out.println("Error: debe elegir 1 o 2");
+            }
+        } while (tipo != 1 && tipo != 2) ;
+
+        int codigo = leerEntero(scanner, "Ingrese código del artículo: ");
+
+        if (buscarArticuloPorCodigo(articulos, codigo) != null) {
+            System.out.println("Error: ya existe un artículo con ese código");
+            return;
+        }
+
+        String nombre = leerTextoNoVacio(scanner, "Ingrese nombre del artículo: ");
+        double precio = leerDoubleNoNegativo(scanner, "Ingrese el precio del artículo: ");
+
+        listarCategorias(categorias);
+        Categoria categoria = pedirCategoriaExistente(scanner, categorias);
+
+        Articulo articulo;
+
+
+        
+
+
+
+
+        }
+    }
 }
