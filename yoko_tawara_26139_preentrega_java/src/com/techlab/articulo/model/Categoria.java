@@ -17,7 +17,7 @@ import com.techlab.articulo.interfaces.Identificable;
  *
  * ESTA CLASE DEBE
  * ------------------------------------------------------------
- * - implementar Identificable
+ * [x] implementar Identificable
  * [x] tener constructor
  * [x] tener getters y setters
  * [x] tener toString()

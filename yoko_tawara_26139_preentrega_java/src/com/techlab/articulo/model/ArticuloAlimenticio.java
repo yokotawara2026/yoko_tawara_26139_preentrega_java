@@ -47,14 +47,24 @@ public class ArticuloAlimenticio extends Articulo {
 
     @Override
     public String getTipoArticulo() {
-        // TODO:
+        // 
         return "";
     }
+
+    
 
     @Override
     public double calcularPrecioFinal() {
         // TODO:
         // Implementar lógica propia del artículo alimenticio.
-        return 0;
+        if (diasParaVencimiento<=5) {
+            return precio * 0.75;
+        }
+        else {
+            return 0;
+        }
     }
+
+    
+
 }
