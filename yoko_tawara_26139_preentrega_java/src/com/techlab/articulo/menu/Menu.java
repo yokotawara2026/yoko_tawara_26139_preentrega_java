@@ -11,9 +11,9 @@ import java.util.Scanner;
  * centralizar la lógica común para no repetir código.
  *
  * Esta clase debe:
- * - guardar un Scanner compartido
- * - declarar el método mostrarMenu()
- * - declarar el método ejecutar()
+ * [x] guardar un Scanner compartido
+ * [x] declarar el método mostrarMenu()
+ * [x] declarar el método ejecutar()
  *
  * Además, podés agregar métodos protegidos reutilizables, por ejemplo:
  * - leerEntero(String mensaje)
@@ -35,14 +35,76 @@ public abstract class Menu {
         this.scanner = scanner;
     }
 
-    // TODO:
+    
     // Declarar método abstracto para mostrar el menú.
     public abstract void mostrarMenu();
 
-    // TODO:
+    
     // Declarar método abstracto para ejecutar el menú.
     public abstract void ejecutar();
 
-    // TODO:
+    
     // Agregar métodos auxiliares de lectura segura si querés reutilizar lógica.
+    
+    public static int leerEntero(Scanner scanner, String mensaje){
+        while (true) {
+            try {
+                System.out.println(mensaje);
+                return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR. No ingresó un número válido");
+            }
+        }
+    }
+
+
+    public static double leerDoubleNoNegativo(Scanner scanner, String mensaje){
+        while (true) {
+            try {
+                System.out.println(mensaje);
+                double valor = Double.parseDouble(scanner.nextLine());
+            
+                if (valor <0) {
+                    System.out.println("EROOR. el precio no puede ser negativo");
+                    continue;
+                }
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR. No es un número decimal válido.");
+                }
+            }
+        }
+    
+
+    public static String leerTexto(Scanner scanner, String mensaje){
+        while (true) {
+            System.out.println(mensaje);
+            String texto = scanner.nextLine();
+
+            if (!texto.trim().isEmpty()) {
+                return texto.trim();
+            }
+
+            System.out.println("ERROR. el texto no puede estar vacío.");
+        }
+    }
+
+    // - leerSiNo(String mensaje)
+    /* public static Bool leerSiNo(Scanner scanner, String mensaje){
+        while (true) {
+            System.out.println(mensaje);
+            String texto = scanner.nextLine();
+
+            if (texto.trim().toLowerCase() == "si") {
+                return texto.trim();
+            }
+
+            System.out.println("ERROR. el texto no puede estar vacío.");
+        }
+    }*/
+
+
+
 }
+ 
+
