@@ -16,7 +16,7 @@ package com.techlab.articulo.model;
  * [x] tener constructor
  * [x] tener getters y setters
  * - sobrescribir getTipoArticulo()
- * - sobrescribir calcularPrecioFinal()
+ * [x] sobrescribir calcularPrecioFinal()
  *
  * IDEA DIDÁCTICA PARA calcularPrecioFinal()
  * ------------------------------------------------------------
@@ -55,9 +55,22 @@ public class ArticuloElectronico extends Articulo {
     }
 
     @Override
-    public double calcularPrecioFinal() {
-        // TODO:
-        // Implementar lógica propia del artículo electrónico.
-        return 0;
+    public String getDetalleEspecifico(){
+        //TODO
+        return "";
     }
+
+    @Override
+    public double calcularPrecioFinal() {
+        
+        // Implementar lógica propia del artículo electrónico.
+        if (garantiaMeses > 12) {
+            return precio * 1.15;
+        }
+        else {
+            return precio;
+        }
+    }
+
+
 }
